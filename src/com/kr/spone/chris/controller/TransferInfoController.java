@@ -106,39 +106,36 @@ public class TransferInfoController {
 		
 		//파싱
 		transInfoVOList = transferInfoService.parseXmlToJson(result);
-		System.out.println(transInfoVOList.size());
+		//System.out.println("파싱된 사이즈 : " + transInfoVOList.size());
 		
 		//중복제거
 		transInfoVOList = transferInfoService.dataDeduplication(transInfoVOList);
-		System.out.println(transInfoVOList.size());
+		//System.out.println("중복제거된 사이즈 : " + transInfoVOList.size());
 		
 		//시차계산
 		transInfoVOList = transferInfoService.calculrateParallax(transInfoVOList);
-		System.out.println(transInfoVOList.size());
+		//System.out.println("시차계산된 사이즈 : " + transInfoVOList.size());
 		
 		//end parsing process
 		
-		/*
+		
 		//start print process
-		System.out.println("========역명 : " + transInfoVOList.get(0).statnNm  + "========");
-		System.out.println("========상하 : " + transInfoVOList.get(0).updnLine  + "========");
+		System.out.println("***	역명 : " + transInfoVOList.get(0).getStatnNm()  + "	***");
+		System.out.println("***	상하 : " + transInfoVOList.get(0).getUpdnLine()  + "	***\r\n");
 		int i = 0;
 		for (TransferInfoResVO vo : transInfoVOList) {
 			i++;
-			System.out.println("========도착예정열차 " + i + "========");
-			System.out.println("========열차 정보 : " + vo.trainLineNm  + "========");
-			System.out.println("========열차 종착역 : " + vo.bstatnNm  + "========");
-			System.out.println("========열차 위치 : " + vo.arvlMsg3  + "========");
-			System.out.println("========열차 상태 : " + vo.arvlName  + "========");
+			System.out.println("도착예정열차 " + i );
+			System.out.println("열차 정보 :	" + vo.getTrainLineNm());
+			//System.out.println("열차 종착역	: " + vo.getBstatnNm());
+			System.out.println("열차 위치 :	" + vo.getArvlMsg2());
+			System.out.println("도착 예정시간 :	" + vo.getArrivalTime() + "\r\n");
 			
-			if (Integer.valueOf(vo.arvlCd) < 6) {
-				System.out.println("========열차 도착시간 : " + vo.arrivalTime + "전========");
-				
-			}
+
 		
 			
 		}
-			*/
+			
 		//end print process
 
 	}

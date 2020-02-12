@@ -32,7 +32,6 @@ package com.kr.spone.chris.vo;
 	 */
 public class TransferInfoReqVO {
 	
-	
 	final String url = "http://swopenAPI.seoul.go.kr/api/subway";
 	final String key = "4f795246486e6a74383961524c4447"; 
 	String type;
@@ -41,13 +40,11 @@ public class TransferInfoReqVO {
 	int end_index;
 	final String statnNm = "청량리";
 	
-	
 	@Override
 	public String toString() {
 		return "TransferInfoReqVO [url=" + url + ", key=" + key + ", type=" + type + ", service=" + service
 				+ ", start_index=" + start_index + ", end_index=" + end_index + ", statnNm=" + statnNm + "]";
 	}
-	
 	public String getType() {
 		return type;
 	}

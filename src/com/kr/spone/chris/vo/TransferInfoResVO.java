@@ -2,7 +2,6 @@ package com.kr.spone.chris.vo;
 
 public class TransferInfoResVO {
 
-	
 	String subwayId; //지하철호선ID
 	String updnLine; //상하행선구분(2호선 : (내선:0,외선:1),상행,하행)
 	String trainLineNm; //도착지방면(성수행 - 구로디지털단지방면)
@@ -24,21 +23,29 @@ public class TransferInfoResVO {
 	String arvlCd; //도착코드(0:진입, 1:도착, 2:출발, 3:전역출발, 4:전역진입, 5:전역도착, 99:운행중)
 	String arvlName; //도착상황(한글)
 	String arrivalTime; //계산된 예상도착시간
-
+	String currentStation; //계산된 현재 열차의 위치
 	
-	
+	@Override
+	public String toString() {
+		return "TransferInfoResVO [subwayId=" + subwayId + ", updnLine=" + updnLine + ", trainLineNm=" + trainLineNm
+				+ ", subwayHeading=" + subwayHeading + ", statnFid=" + statnFid + ", statnTid=" + statnTid
+				+ ", statnId=" + statnId + ", statnNm=" + statnNm + ", ordkey=" + ordkey + ", subwayList=" + subwayList
+				+ ", statnList=" + statnList + ", barvlDt=" + barvlDt + ", btrainNo=" + btrainNo + ", bstatnId="
+				+ bstatnId + ", bstatnNm=" + bstatnNm + ", recptnDt=" + recptnDt + ", arvlMsg2=" + arvlMsg2
+				+ ", arvlMsg3=" + arvlMsg3 + ", arvlCd=" + arvlCd + ", arvlName=" + arvlName + ", arrivalTime="
+				+ arrivalTime + ", currentStation=" + currentStation + "]";
+	}
+	public String getCurrentStation() {
+		return currentStation;
+	}
+	public void setCurrentStation(String currentStation) {
+		this.currentStation = currentStation;
+	}
 	public String getArvlName() {
 		return arvlName;
 	}
 	public void setArvlName(String arvlName) {
 		this.arvlName = arvlName;
-	}
-	@Override
-	public String toString() {
-		return "TransferInfoResVO [subwayId=" + subwayId + ", updnLine=" + updnLine + ", trainLineNm=" + trainLineNm
-				+ ", subwayHeading=" + subwayHeading + ", statnNm=" + statnNm + ", ordkey=" + ordkey + ", barvlDt="
-				+ barvlDt + ", bstatnNm=" + bstatnNm + ", recptnDt=" + recptnDt + ", arvlMsg2=" + arvlMsg2
-				+ ", arvlMsg3=" + arvlMsg3 + ", arvlCd=" + arvlCd + ", arrivalTime=" + arrivalTime + "]";
 	}
 	public String getArrivalTime() {
 		return arrivalTime;
