@@ -1,4 +1,4 @@
-package com.kr.spone.chris.vo;
+package com.kr.spone.chris.takeontime.vo;
 
 public class TransferInfoResVO {
 

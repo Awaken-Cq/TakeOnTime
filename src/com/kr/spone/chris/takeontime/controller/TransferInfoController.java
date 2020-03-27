@@ -1,4 +1,4 @@
-package com.kr.spone.chris.controller;
+package com.kr.spone.chris.takeontime.controller;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -28,9 +28,9 @@ import org.json.XML;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import com.kr.spone.chris.service.TransferInfoService;
-import com.kr.spone.chris.vo.TransferInfoReqVO;
-import com.kr.spone.chris.vo.TransferInfoResVO;
+import com.kr.spone.chris.takeontime.service.TransferInfoService;
+import com.kr.spone.chris.takeontime.vo.TransferInfoReqVO;
+import com.kr.spone.chris.takeontime.vo.TransferInfoResVO;
 
 /**
  * 

@@ -1,4 +1,4 @@
-package com.kr.spone.chris.service;
+package com.kr.spone.chris.takeontime.service;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -21,7 +21,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.XML;
 
-import com.kr.spone.chris.vo.TransferInfoResVO;
+import com.kr.spone.chris.takeontime.vo.TransferInfoResVO;
 
 public class TransferInfoService {
 	
